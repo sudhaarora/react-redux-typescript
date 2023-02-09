@@ -6,6 +6,7 @@ import { Article } from "./components/Article";
 import { AddArticle } from "./components/AddArticle";
 import { addArticle, removeArticle } from "./store/actionCreators";
 import { Dispatch } from "redux";
+import Counter from "./components/Counter";
 
 const App: React.FC = () => {
   const articles: readonly IArticle[] = useSelector(
@@ -22,6 +23,9 @@ const App: React.FC = () => {
 
   return (
     <main>
+      <h1>Counter Calculator</h1>
+      <Counter />
+      <br /><hr />
       <h1>My Articles</h1>
       <AddArticle saveArticle={saveArticle} />
       {articles.map((article: IArticle) => (

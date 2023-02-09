@@ -10,7 +10,7 @@ export const AddArticle: React.FC<Props> = ({ saveArticle }) => {
   const handleArticleData = (e: React.FormEvent<HTMLInputElement>) => {
     setArticle({
       ...article,
-      [e.currentTarget.id]: e.currentTarget.value
+      [e.currentTarget.id]: e.currentTarget.value,
     });
   };
 
